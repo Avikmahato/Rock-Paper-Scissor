@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <title>rock_paper_scissor</title>
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+    <style>
+        @media (min-width: 576px) {
+            .avk img {
+                width: 220px;
+            }
+        }
+        @media (min-width: 768px) {
+            .avk img {
+                width: 220px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar bg-dark mb-2 navbar-expand">
+        <div class="container">
+            <h1 class="navbar-brand text-center container-fluid text-white p-2">Rock Paper Scissor</h1>
+            <div>
+                <button class="btn btn-outline-success fw-bolder btn-sm" onclick="chalu()">
+                    Rules
+                </button>
+            </div>
+        </div>
+    </nav>
+    <div class="position-sticky top-0  mb-2">
+        <div class="container shadow-lg bg-dark d-flex align-items-center justify-content-between rounded-top-3"
+            style="height: 200px;">
+            <div>
+                <img src="images/gamer.png" alt="" width="100px" id="me">
+            </div>
+            <div>
+                <img src="images/versus.png" alt="error" width="100px">
+            </div>
+            <div>
+                <img src="images/chatbot.png" alt="" width="100px" id="bot">
+            </div>
+        </div>
+        <p class="fs-1 fw-bolder container text-bg-primary rounded-bottom-2 shadow" id="score">score : 0</p>
+    </div>
+    <div class="container-sm mx-auto rounded-2 row row-cols-3 mb-2 d-flex justify-content-evenly avk">
+        <img src="images/rock.png" alt="error" class="shadow rounded-2 border border-danger " onclick="game(1)">
+        <img src="images/paper.png" alt="error" class="shadow rounded-2 border border-warning " onclick="game(2)">
+        <img src="images/scissor.png" alt="error" class="shadow rounded-2 border border-success " onclick="game(3)">
+    </div>
+    <div class="btn-group container d-flex justify-content-center mb-2">
+        <button class="btn btn-outline-danger fw-bold shadow-lg" id="rock" onclick="game(1)">Rock</button>
+        <button class="btn btn-outline-warning fw-bold shadow-lg" id="paper" onclick="game(2)">Paper</button>
+        <button class="btn btn-outline-success fw-bold shadow-lg" id="scissor" onclick="game(3)">Scissor</button>
+    </div>
+    <div class="container bg-light d-flex justify-content-center p-3 rounded-2 shadow-sm">
+        <img src="images/favicon.png" alt="" width="200px" id="result">
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+        crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script type="module">
+        import Swal from 'sweetalert2';
+    </script>
+</body>
+
+</html>
